@@ -11,6 +11,8 @@ const Introduction = ({ data }) => {
     const numberOfColumns = Object.keys(data[0]).length;
     
     // Build dynamic intro text with data metrics using string concatenation
+
+    // 1.4 Adding the introduction text with dynamic values
     const introText = "This visualization shows incidents of missing migrants across the globe. " +
         "The dataset contains " + numberOfIncidents + " incidents with a total of " + 
         totalCasualties + " casualties reported. " +
@@ -41,7 +43,7 @@ const path = d3.geoPath(projection);
 // Generate the lon/lat grid lines using d3.geoGraticule
 const graticule = d3.geoGraticule();
 
-const WorldGraticule = ({width, height}) => (
+const WorldGraticule = () => (
     // TODO 4.2: Memoization for sphere and graticules
     <g className="worldGraticule">
         <>
