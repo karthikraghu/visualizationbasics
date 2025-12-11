@@ -29,7 +29,7 @@
 
 
 // TODO 3.1: Define an accessor function called yValue to access the total number of dead and missing migrants 
-// 			 ("Total Dead and Missing") from the original data table.
+// 			 ("Total Number of Dead and Missing") from the original data table.
 // TODO 3.2: Define variables containing the text of your y axis label (we won't define an x axis label)
 // variables for the offset of the axis label
 const yAxisLabelOffset = 30;

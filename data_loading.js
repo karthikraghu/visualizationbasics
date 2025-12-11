@@ -32,7 +32,7 @@ const useWorldAtlas = () => {
 };
 
 // the URL where the missing migrants data is downloaded from
-const csvUrl = 'https://gist.githubusercontent.com/curran/a9656d711a8ad31d812b8f9963ac441c/raw/MissingMigrants-Global-2019-10-08T09-47-14-subset.csv';
+const csvUrl = 'https://gist.githubusercontent.com/karthikraghu/87dea82f420981b46919025ccb1319b8/raw';
 
 // --------------------------------------------------
 // TODO 1.3 (Data Loading)
@@ -42,8 +42,8 @@ const csvUrl = 'https://gist.githubusercontent.com/curran/a9656d711a8ad31d812b8f
 const row = d => {
     // Read the 'Location Coordinates' and split them by the ',' separator, map each value from a string to a number, and then reverse the order
     d.coords = d['Location Coordinates'].split(',').map(d => +d).reverse();
-    // Convert the 'Total Dead and Missing' string to a number
-    d['Total Dead and Missing'] = +d['Total Dead and Missing'];
+    // Convert the 'Total Number of Dead and Missing' string to a number
+    d['Total Number of Dead and Missing'] = +d['Total Number of Dead and Missing'];
     // Convert the 'Reported Date' string to a Date object
     d['Reported Date'] = new Date(d['Reported Date']);
     return d;

@@ -7,7 +7,7 @@ const Introduction = ({ data }) => {
 
     // Calculate dynamic metrics from the data
     const numberOfIncidents = data.length;
-    const totalCasualties = data.reduce((sum, d) => sum + d['Total Dead and Missing'], 0);
+    const totalCasualties = data.reduce((sum, d) => sum + d['Total Number of Dead and Missing'], 0);
     const numberOfColumns = Object.keys(data[0]).length;
     
     // Build dynamic intro text with data metrics using string concatenation

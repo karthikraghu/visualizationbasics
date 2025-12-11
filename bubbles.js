@@ -4,7 +4,7 @@
 
 // Accessor function to get the number of dead and missing migrants from each data row
 // TODO 2.2: define a function that accesses the number of dead and missing migrants from the data set called sizeValue
-const sizeValue = d => d['Total Dead and Missing'];
+const sizeValue = d => d['Total Number of Dead and Missing'];
 
 // defines the maximum radius of a bubble
 const maxRadius = 15;
