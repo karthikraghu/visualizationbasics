@@ -39,6 +39,9 @@ circle {
 .mark {
     fill: #137B80;
 }
+.bar {
+    fill: #137B80;
+}
 .axis-label {
     font-size: 0.5em;
     fill:#8E8883;

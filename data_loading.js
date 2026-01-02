@@ -38,14 +38,17 @@ const csvUrl = 'https://gist.githubusercontent.com/karthikraghu/87dea82f420981b4
 // TODO 1.3 (Data Loading)
 // --------------------------------------------------
 
+// Create a date parser for the specific format in the CSV
+const parseDate = d3.timeParse("%a, %m/%d/%Y - %H:%M");
+
 // a helper that takes a csv row and transforms it into something we can work with
 const row = d => {
     // Read the 'Location Coordinates' and split them by the ',' separator, map each value from a string to a number, and then reverse the order
     d.coords = d['Location Coordinates'].split(',').map(d => +d).reverse();
     // Convert the 'Total Number of Dead and Missing' string to a number
     d['Total Number of Dead and Missing'] = +d['Total Number of Dead and Missing'];
-    // Convert the 'Reported Date' string to a Date object
-    d['Reported Date'] = new Date(d['Reported Date']);
+    // Convert the 'Reported Date' string to a Date object using the parser
+    d['Reported Date'] = parseDate(d['Reported Date']);
     return d;
 };
 
