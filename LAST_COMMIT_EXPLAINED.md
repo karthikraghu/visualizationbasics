@@ -82,17 +82,17 @@ This file sets up the basic HTML structure and loads all necessary libraries.
 
 ### Explanation Line by Line:
 
-**Lines 1-3:** Standard HTML5 structure
+**Standard HTML5 structure:**
 - Sets document type and HTML tag
 - `<meta charset="utf-8">` ensures proper character encoding for international text
 
-**Lines 8-18:** External Libraries
-- **React & ReactDOM (lines 14-15):** Core library for building user interfaces using components
-- **Babel (line 16):** Transforms JSX (HTML-like syntax in JavaScript) into regular JavaScript
-- **D3.js (line 17):** Powerful library for data manipulation and visualization
-- **TopoJSON (line 18):** Compressed geographic data format, smaller than GeoJSON
+**External Libraries:**
+- **React & ReactDOM:** Core library for building user interfaces using components
+- **Babel:** Transforms JSX (HTML-like syntax in JavaScript) into regular JavaScript
+- **D3.js:** Powerful library for data manipulation and visualization
+- **TopoJSON:** Compressed geographic data format, smaller than GeoJSON
 
-**Lines 26-31:** Script Loading Order (CRITICAL!)
+**Script Loading Order (CRITICAL!):**
 Scripts must load in this exact order because each depends on the previous ones:
 1. `data_loading.js` - Defines data loading hooks
 2. `static_content.js` - Defines map components (needs data hooks)
@@ -100,7 +100,7 @@ Scripts must load in this exact order because each depends on the previous ones:
 4. `bar_chart.js` - Defines histogram (needs data hooks)
 5. `app.js` - Uses all components above to build the full application
 
-**Line 24:** `<div id="root"></div>`
+**The Root Element: `<div id="root"></div>`**
 - This is where React will inject the entire application
 - React takes over this div and renders all components inside it
 
